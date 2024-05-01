@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pezesha.agent.ui.main.home.HomeFragment"
+        android:label="Pezesha Agent"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/addSmeFragment"
+        android:name="com.pezesha.agent.ui.main.addSme.AddSmeFragment"
+        android:label="Add SMEs"
+        tools:layout="@layout/fragment_add_sme" >
+        <action
+            android:id="@+id/action_addSmeFragment_to_documentsActivity"
+            app:destination="@id/documentsActivity" />
+        <action
+            android:id="@+id/action_addSmeFragment_to_psychometricFragment"
+            app:destination="@id/psychometricFragment" />
+        <action
+            android:id="@+id/action_addSmeFragment_to_applyLoanActivity"
+            app:destination="@id/applyLoanActivity" />
+        <action
+            android:id="@+id/action_addSmeFragment_to_kycDetailsFragment"
+            app:destination="@id/kycDetailsFragment"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/customersListFragment"
+        android:name="com.pezesha.agent.ui.main.customers.CustomersFragment"
+        android:label="Customers"
+        tools:layout="@layout/fragment_customers_list" />
+    <fragment
+        android:id="@+id/loansListFragment"
+        android:name="com.pezesha.agent.ui.main.loans.LoansListFragment"
+        android:label="Loans"
+        tools:layout="@layout/fragment_loans_list" />
+    <activity
+        android:id="@+id/documentsActivity"
+        android:name="com.pezesha.agent.ui.registersme.documents.DocumentsActivity"
+        android:label="activity_documents"
+        tools:layout="@layout/activity_documents" />
+    <fragment
+        android:id="@+id/psychometricFragment"
+        android:name="com.pezesha.agent.ui.registersme.psychometric.PsychometricFragment"
+        android:label="Psychometric Questions"
+        tools:layout="@layout/fragment_psychometric" />
+    <activity
+        android:id="@+id/applyLoanActivity"
+        android:name="com.pezesha.agent.ui.registersme.applyLoan.ApplyLoanActivity"
+        android:label="activity_apply_loan"
+        tools:layout="@layout/activity_apply_loan" />
+    <fragment
+        android:id="@+id/getConsentFragment"
+        android:name="com.pezesha.agent.ui.main.addSme.consent.GetConsentFragment"
+        android:label="fragment_get_consent"
+        tools:layout="@layout/fragment_get_consent" >
+        <action
+            android:id="@+id/action_getConsentFragment_to_consentReceivedFragment"
+            app:destination="@id/consentReceivedFragment"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/getConsentFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/consentReceivedFragment"
+        android:name="com.pezesha.agent.ui.main.addSme.consent.ConsentReceivedFragment"
+        android:label="fragment_consent_received"
+        tools:layout="@layout/fragment_consent_received" />
+    <fragment
+        android:id="@+id/kycDetailsFragment"
+        android:name="com.pezesha.agent.ui.main.addSme.kyc.KycDetailsFragment"
+        android:label="fragment_kyc_details"
+        tools:layout="@layout/fragment_kyc_details" />
+    <fragment
+        android:id="@+id/crbCheckFragment"
+        android:name="com.pezesha.agent.ui.main.addSme.crb.check.CrbCheckFragment"
+        android:label="fragment_crb_check"
+        tools:layout="@layout/fragment_crb_check" >
+        <action
+            android:id="@+id/action_crbCheckFragment_to_crbScoreFragment"
+            app:destination="@id/crbScoreFragment"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/crbCheckFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/crbScoreFragment"
+        android:name="com.pezesha.agent.ui.main.addSme.crb.score.CrbScoreFragment"
+        android:label="fragment_crb_score"
+        tools:layout="@layout/fragment_crb_score" />
+</navigation>

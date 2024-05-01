@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="loan_repayment_duration">
+        <item>7 days</item>
+        <item>14 days</item>
+        <item>30 days</item>
+        <item>60 days</item>
+        <item>90 days</item>
+        <item>180 days</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="business_sub_industry">
+        <item>Transport and distribution services</item>
+        <item>Health services</item>
+        <item>Environmental services</item>
+        <item>Educational services</item>
+        <item>Construction services</item>
+        <item>Communication services</item>
+        <item>General trade services</item>
+        <item>IT services</item>
+        <item>Consultancy services</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="education_levels">
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>College</item>
+        <item>University</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="biz_types">
+        <item>Micro/small business</item>
+        <item>Medium business</item>
+    </string-array>
+
+    <string-array name="biz_social_media">
+        <item>Corporate</item>
+        <item>Individual</item>
+    </string-array>
+
+    <string-array name="relationship">
+        <item>Husband</item>
+        <item>Wife</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Sibling</item>
+        <item>Other</item>
+    </string-array>
+
+
+</resources>

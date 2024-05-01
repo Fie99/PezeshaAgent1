@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_documents"
+    app:startDestination="@id/documentFragment">
+
+    <fragment
+        android:id="@+id/documentFragment"
+        android:name="com.pezesha.agent.ui.registersme.documents.DocumentFragment"
+        android:label="fragment_document"
+        tools:layout="@layout/fragment_document" >
+        <action
+            android:id="@+id/action_documentFragment_to_nationalIdFragment"
+            app:destination="@id/nationalIdFragment" />
+        <action
+            android:id="@+id/action_documentFragment_to_documentScoringFragment"
+            app:destination="@id/documentScoringFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nationalIdFragment"
+        android:name="com.pezesha.agent.ui.registersme.documents.NationalIdFragment"
+        android:label="National ID"
+        tools:layout="@layout/fragment_national_id" />
+    <fragment
+        android:id="@+id/documentScoringFragment"
+        android:name="com.pezesha.agent.ui.registersme.documents.DocumentScoringFragment"
+        android:label="fragment_document_scoring"
+        tools:layout="@layout/fragment_document_scoring" >
+        <action
+            android:id="@+id/action_documentScoringFragment_to_creditScoreFragment"
+            app:destination="@id/creditScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditScoreFragment"
+        android:name="com.pezesha.agent.ui.registersme.documents.CreditScoreFragment"
+        android:label="Credit score"
+        tools:layout="@layout/fragment_credit_score" />
+</navigation>

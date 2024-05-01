@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/main_margin"
+    android:paddingTop="@dimen/main_margin"
+    android:paddingEnd="@dimen/main_margin"
+    tools:context=".ui.main.home.HomeFragment">
+
+    <com.pezesha.agent.ui.views.BusinessStats
+        android:id="@+id/bs_registered_biz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:bsContent="@string/registered_businesses"
+        app:bsIcon="@drawable/ic_building"
+        app:layout_constraintEnd_toStartOf="@id/bs_unregistered_biz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:bsNumber="26" />
+
+    <com.pezesha.agent.ui.views.BusinessStats
+        android:id="@+id/bs_unregistered_biz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:bsContent="Unregistered Businesses"
+        app:bsIcon="@drawable/ic_building"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bs_registered_biz"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:bsNumber="6" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_faqs"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/main_margin"
+        app:cardBackgroundColor="@color/secondary_color_light"
+        app:cardCornerRadius="@dimen/medium_margin"
+        app:cardElevation="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/bs_registered_biz">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/main_margin"
+            android:paddingTop="@dimen/main_margin"
+            android:paddingEnd="@dimen/main_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_answering_questions"
+                style="@style/TitleText"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:text="@string/challenges_answering_customer_questions"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_faq"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/main_margin"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/check_faq_questions"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_answering_questions"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="btn_faq, tv_answering_questions" />
+
+            <ImageView
+                android:id="@+id/iv_faqs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_customer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/barrier_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_added_business"
+        style="@style/NormalText"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="@string/recently_added_businesses"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_faqs" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_view_all"
+        style="@style/TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_all"
+        app:layout_constraintBottom_toBottomOf="@id/tv_added_business"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_added_business" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recent_businesses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_view_all"
+        tools:itemCount="6"
+        tools:listitem="@layout/list_item_customer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

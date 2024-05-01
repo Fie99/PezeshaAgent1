@@ -1,0 +1,181 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PezeshaAgent" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color_dark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/secondary_color_dark</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/main_bg_color</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="materialButtonStyle">@style/ButtonStyle</item>
+        <item name="textInputStyle">@style/TextInputLayoutStyle</item>
+        <!--        <item name="checkboxStyle">@style/Widget.PezeshaAgent.CheckBox</item>-->
+        <!--        <item name="android:editTextColor">@color/jet</item>-->
+        <!--        <item name="android:textCursorDrawable">@drawable/text_cursor</item>-->
+    </style>
+
+    <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/main_bg_color</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <!-- Required for animated icons -->
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.PezeshaAgent</item>
+
+    </style>
+
+    <!-- Button themes. -->
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="cornerSizeTopLeft">@dimen/btn_corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/btn_corner_radius</item>
+        <item name="cornerSizeBottomRight">@dimen/btn_corner_radius</item>
+        <item name="cornerSizeBottomLeft">@dimen/btn_corner_radius</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:padding">@dimen/medium_margin</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+
+    </style>
+
+    <style name="TextButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="textAllCaps">false</item>
+        <item name="iconTint">@null</item>
+        <item name="iconPadding">@dimen/medium_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/btn_text_selector</item>
+    </style>
+
+    <style name="IconButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">@dimen/medium_margin</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/btn_outline_color_selector</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="iconTint">@color/text_gray</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:paddingTop">@dimen/main_margin</item>
+        <item name="android:paddingBottom">@dimen/main_margin</item>
+        <item name="cornerSizeTopLeft">@dimen/btn_corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/btn_corner_radius</item>
+        <item name="cornerSizeBottomRight">@dimen/btn_corner_radius</item>
+        <item name="cornerSizeBottomLeft">@dimen/btn_corner_radius</item>
+    </style>
+
+    <!-- End Button Styles -->
+
+    <!-- Text Style -->
+    <style name="TitleText">
+        <item name="android:textColor">@color/primary_color_dark</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="NormalText">
+        <item name="android:textColor">@color/secondary_color_dark</item>
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- End Text Style -->
+
+    <!-- Input Fields Style -->
+
+    <!-- Text Input themes. -->
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">@color/apple</item>
+        <item name="colorOnSurface">@color/jet</item>
+        <item name="colorError">@color/design_default_color_error</item>
+        <item name="errorEnabled">true</item>
+
+    </style>
+
+    <style name="DropDownTextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+        <item name="cornerFamily">rounded</item>
+        <item name="hintTextColor">?attr/colorOnSurface</item>
+        <item name="colorPrimary">@color/apple</item>
+        <item name="colorOnSurface">@color/jet</item>
+        <item name="colorError">@color/design_default_color_error</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <!-- End Input Fields Style -->
+
+    <style name="Theme.PezeshaAgent.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <!-- Typography themes. -->
+
+    <style name="TextAppearance.PezeshaAgent.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <!--        <item name="android:textColor">@color/black</item>-->
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Date picker -->
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <!-- Simple Picker Dialog -->
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorSecondary">@color/primary_color_light</item>
+        <item name="colorSurface">@color/main_bg_color</item>
+        <item name="colorOnSurface">@color/main_bg_color</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleText</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/NormalText</item>
+    </style>
+
+    <style name="MyDatePicker" >
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/primary_color</item>
+    </style>
+
+</resources>

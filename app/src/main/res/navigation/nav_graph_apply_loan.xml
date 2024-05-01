@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_apply_loan"
+    app:startDestination="@id/loanApplicationFragment">
+
+    <fragment
+        android:id="@+id/loanApplicationFragment"
+        android:name="com.pezesha.agent.ui.registersme.applyLoan.LoanApplicationFragment"
+        android:label="fragment_loan_application"
+        tools:layout="@layout/fragment_loan_application" >
+        <action
+            android:id="@+id/action_loanApplicationFragment_to_loanApplicationSubmittedFragment"
+            app:destination="@id/loanApplicationSubmittedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanApplicationSubmittedFragment"
+        android:name="com.pezesha.agent.ui.registersme.applyLoan.LoanApplicationSubmittedFragment"
+        android:label="fragment_loan_application_submitted"
+        tools:layout="@layout/fragment_loan_application_submitted" />
+</navigation>

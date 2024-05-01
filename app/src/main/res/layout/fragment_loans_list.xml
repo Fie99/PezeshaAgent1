@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.loans.LoansListFragment">
+
+
+    <TextView
+        android:id="@+id/tv_customer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jon Doe"
+        style="@style/TitleText"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_loan_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loan ID:P21123"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_customer_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btn_pay_loan"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pay_loan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay loan"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guide_vertical"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_repayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repayments"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/tv_loan_id"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toEndOf="@id/tv_repayments"
+        app:layout_constraintTop_toTopOf="@id/tv_repayments" />
+
+    <LinearLayout
+        android:id="@+id/firstLoanRepaymentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/tv_repayments"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="20th APR 2023"
+                android:textColor="@color/secondary_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.PezeshaAgent.Subtitle1"
+                android:textColor="@color/black"
+                android:text="- KSH 23,000" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KSH 34,000"
+            android:textColor="@color/primary_color"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secondLoanRepaymentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/firstLoanRepaymentDescription"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="20th APR 2023"
+                android:textColor="@color/secondary_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.PezeshaAgent.Subtitle1"
+                android:textColor="@color/black"
+                android:text="- KSH 53,000" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KSH 34,000"
+            android:textColor="@color/primary_color"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/thirdLoanRepaymentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/secondLoanRepaymentDescription"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="20th APR 2023"
+                android:textColor="@color/secondary_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.PezeshaAgent.Subtitle1"
+                android:textColor="@color/black"
+                android:text="- KSH 100,000" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KSH 34,000"
+            android:textColor="@color/primary_color"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fourthLoanRepaymentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/small_margin"
+        app:layout_constraintTop_toBottomOf="@id/thirdLoanRepaymentDescription"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="20th APR 2023"
+                android:textColor="@color/secondary_color"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.PezeshaAgent.Subtitle1"
+                android:textColor="@color/black"
+                android:text="- KSH 187,000" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KSH 34,000"
+            android:textColor="@color/primary_color"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

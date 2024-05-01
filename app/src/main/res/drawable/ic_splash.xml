@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_logo"
+    android:insetLeft="55dp"
+    android:insetRight="55dp"
+    android:insetTop="55dp"
+    android:insetBottom="55dp"/>

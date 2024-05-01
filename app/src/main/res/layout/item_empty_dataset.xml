@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/NormalText"
+        android:layout_gravity="center"
+        android:drawablePadding="@dimen/large_margin"
+        tools:text="No Data"
+        android:textAlignment="center"
+        android:textColor="@color/text_gray"
+        app:drawableTopCompat="@drawable/empty_data" />
+
+
+</FrameLayout>

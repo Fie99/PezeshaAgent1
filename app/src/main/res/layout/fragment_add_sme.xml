@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".ui.main.addSme.AddSmeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/main_margin">
+
+        <TextView
+            android:id="@+id/txt_add"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/add_sme_details"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_fill_fields"
+            style="@style/NormalText"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/fill_in_all_fields"
+            app:layout_constraintTop_toBottomOf="@id/txt_add" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            android:layout_marginBottom="@dimen/main_margin"
+            android:orientation="vertical"
+            app:constraint_referenced_ids="add_consent, add_kyc, add_crb, add_documents, add_questions, add_loan"
+            app:flow_verticalGap="@dimen/main_margin"
+            app:flow_verticalStyle="spread_inside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_fill_fields"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <com.pezesha.agent.ui.views.AddDetail
+            android:id="@+id/add_consent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            app:adStartIcon="@drawable/ic_contract"
+            app:adState="INACTIVE"
+            app:adTitle="Terms &amp; conditions"
+            tools:adState="DONE" />
+
+        <com.pezesha.agent.ui.views.AddDetail
+            android:id="@+id/add_kyc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            app:adStartIcon="@drawable/ic_contract"
+            app:adState="INACTIVE"
+            app:adTitle="KYC Details"
+            tools:adState="ACTIVE"
+            tools:ignore="MissingConstraints" />
+
+        <com.pezesha.agent.ui.views.AddDetail
+            android:id="@+id/add_crb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            app:adEndIcon="@null"
+            app:adStartIcon="@drawable/ic_contract"
+            app:adState="INACTIVE"
+            app:adTitle="CRB Check"
+            tools:ignore="MissingConstraints" />
+
+        <com.pezesha.agent.ui.views.AddDetail
+            android:id="@+id/add_documents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            app:adEndIcon="@null"
+            app:adStartIcon="@drawable/ic_contract"
+            app:adState="INACTIVE"
+            app:adTitle="Documents"
+            tools:ignore="MissingConstraints" />
+
+        <com.pezesha.agent.ui.views.AddDetail
+            android:id="@+id/add_questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            app:adEndIcon="@null"
+            app:adStartIcon="@drawable/ic_contract"
+            app:adState="INACTIVE"
+            app:adTitle="Psychometric Questions"
+            tools:ignore="MissingConstraints" />
+
+        <com.pezesha.agent.ui.views.AddDetail
+            android:id="@+id/add_loan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            app:adEndIcon="@null"
+            app:adStartIcon="@drawable/ic_contract"
+            app:adState="INACTIVE"
+            app:adTitle="Apply Loan"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

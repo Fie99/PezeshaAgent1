@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_registered"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/small_margin"
+        android:elevation="@dimen/medium_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardBackgroundColor="@color/primary_color_light"
+        app:cardCornerRadius="@dimen/medium_margin"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/small_margin">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_circle"
+                android:backgroundTint="@android:color/white"
+                android:padding="@dimen/medium_margin"
+                android:src="@drawable/ic_building"
+                app:layout_constraintBottom_toBottomOf="@id/tv_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_number"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/main_margin"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@id/iv_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="30" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/NormalText"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/text_black_color"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_number"
+                tools:text="Registered Businesses" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</merge>

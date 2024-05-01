@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "671533076358",
+    "project_id": "pezesha-v2-live",
+    "storage_bucket": "pezesha-v2-live.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671533076358:android:ac8ffa4a8aebf733a9e607",
+        "android_client_info": {
+          "package_name": "com.pezesha.agent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671533076358-oaop1otnhkvvivhv5oqrnkfuo4v6jim1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB03l2JhZDAEEsKjmFBpBHey4xOlBw4tZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671533076358-oaop1otnhkvvivhv5oqrnkfuo4v6jim1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671533076358:android:347a3ed7f1b65087a9e607",
+        "android_client_info": {
+          "package_name": "com.pezesha.pezeshamarketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671533076358-oaop1otnhkvvivhv5oqrnkfuo4v6jim1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB03l2JhZDAEEsKjmFBpBHey4xOlBw4tZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671533076358-oaop1otnhkvvivhv5oqrnkfuo4v6jim1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

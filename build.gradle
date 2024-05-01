@@ -1,0 +1,76 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = '1.8.22'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.45'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.6.0'
+        classpath 'com.google.gms:google-services:4.3.15'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.6'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.0.2' apply false
+    id 'com.android.library' version '8.0.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+    id 'com.google.dagger.hilt.android' version '2.45' apply false
+    id 'io.sentry.android.gradle' version '3.6.0'
+}
+
+ext {
+    flavor = getCurrentFlavor()
+    if (flavor.isEmpty()) {
+        flavor = "dev"
+    }
+
+    config = getProps('env/' + flavor + '.properties')
+
+    compileSdk = 34
+    targetSdk = compileSdk
+    minSdk = 23
+
+    hilt_version = '2.45'
+    nav_version = '2.6.0'
+    lifecycle_version = '2.6.1'
+    coroutines_version = '1.6.4'
+    arch_version = "2.2.0"
+}
+
+def getCurrentFlavor() {
+    Gradle gradle = getGradle()
+
+    def pattern = Pattern.compile("([A-Z][A-Za-z]+)(Release|Debug)")
+    def flavor = ""
+
+    gradle.getStartParameter().getTaskNames().any { name ->
+        Matcher matcher = pattern.matcher(name)
+        if (matcher.find()) {
+            flavor = matcher.group(1).toLowerCase()
+            return true
+        }
+    }
+
+    return flavor
+}
+
+def getProps(path) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(path)))
+    return props
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

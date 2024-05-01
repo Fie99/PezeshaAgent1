@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TitleText"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:drawablePadding="@dimen/large_margin"
+        tools:text="@string/get_consent_to_proceed"
+        tools:drawableTopCompat="@drawable/approved"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/NormalText"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:gravity="center"
+        tools:text="Your customer will receive an sms with the terms &amp; conditions and will consent by sharing a 4 digit code sent on phone"
+        android:textColor="@color/text_gray"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+</merge>

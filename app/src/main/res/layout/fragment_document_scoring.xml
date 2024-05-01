@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.registersme.documents.DocumentScoringFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_color_dark"
+        android:text="Please notify the customer to have the following documents ready."
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_national_id"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:text="National ID"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:strokeColor="@color/dark_gray"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_mpesa_statement"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:text="Mpesa statement"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:strokeColor="@color/dark_gray"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_national_id"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_trading_licence"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:text="Trading licence"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:strokeColor="@color/dark_gray"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_mpesa_statement"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_mnt_statement"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:text="MNT statement(optional)"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:strokeColor="@color/dark_gray"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_trading_licence"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_bank_statement"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:text="Bank statement(optional)"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:strokeColor="@color/dark_gray"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/btn_mnt_statement"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit for scoring"
+        android:textAllCaps="false"
+        app:icon="@drawable/circle_small"
+        app:iconGravity="textEnd"
+        android:backgroundTint="@color/secondary_color_dark"
+        app:layout_constraintTop_toBottomOf="@id/btn_bank_statement"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BusinessStats">
+        <attr name="bsIcon" format="reference" />
+        <attr name="bsNumber" format="string" />
+        <attr name="bsContent" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="AddDetail">
+        <attr name="adStartIcon" format="reference" />
+        <attr name="adEndIcon" format="reference" />
+        <attr name="adTitle" format="string" />
+        <attr name="adState" format="string" />
+        <attr name="adViewBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="InfoLabel">
+        <attr name="ilIcon" format="reference" />
+        <attr name="ilTitle" format="string" />
+        <attr name="ilContent" format="string" />
+    </declare-styleable>
+
+</resources>
